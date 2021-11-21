@@ -12,9 +12,9 @@ using Sol_Almacen.Entidades;
 
 namespace Sol_Almacen.Presentacion
 {
-    public partial class Frm_Grupos : Form
+    public partial class Frm_Marcas : Form
     {
-        public Frm_Grupos()
+        public Frm_Marcas()
         {
             InitializeComponent();
         }
@@ -29,9 +29,9 @@ namespace Sol_Almacen.Presentacion
             Dgv_Listado.Columns[0].Width = 100;
             Dgv_Listado.Columns[0].Visible = false;
             Dgv_Listado.Columns[1].Width = 100;
-            Dgv_Listado.Columns[1].HeaderText = "CÓDIGO GR";
+            Dgv_Listado.Columns[1].HeaderText = "CÓDIGO MA";
             Dgv_Listado.Columns[2].Width = 300;
-            Dgv_Listado.Columns[2].HeaderText = "GRUPO";
+            Dgv_Listado.Columns[2].HeaderText = "MARCA";
            
         }
 
@@ -39,7 +39,7 @@ namespace Sol_Almacen.Presentacion
         {
             try
             {
-                Dgv_Listado.DataSource = N_Grupos.Mostrar_gr(Ctexto);
+                Dgv_Listado.DataSource = N_Marcas.Mostrar_ma(Ctexto);
                 this.Formato();
                 Lbl_total.Text = "Total registros: " + Convert.ToString(Dgv_Listado.Rows.Count);
             }
@@ -51,14 +51,14 @@ namespace Sol_Almacen.Presentacion
 
         private void Selecciona_dgv()
         {
-            if (String.IsNullOrEmpty(Convert.ToString(Dgv_Listado.CurrentRow.Cells["codigo_gr"].Value)))
+            if (String.IsNullOrEmpty(Convert.ToString(Dgv_Listado.CurrentRow.Cells["codigo_ma"].Value)))
             {
                 MessageBox.Show("Seleccione un registro ", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                Txt_codigo_gr.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["codigo_gr"].Value);               
-                Txt_descripcion_gr.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["descripcion_gr"].Value);
+                Txt_codigo_ma.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["codigo_ma"].Value);               
+                Txt_descripcion_ma.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["descripcion_ma"].Value);
             }
         }
 
@@ -69,9 +69,9 @@ namespace Sol_Almacen.Presentacion
             Btn_retornar.Visible = !Lestado;
 
             Txt_buscar.Clear();
-            Txt_codigo_gr.Text = "0";           
-            Txt_descripcion_gr.Text = "";            
-            Txt_descripcion_gr.ReadOnly = !Lestado;
+            Txt_codigo_ma.Text = "0";           
+            Txt_descripcion_ma.Text = "";            
+            Txt_descripcion_ma.ReadOnly = !Lestado;
         }
 
         private void Estado_BotonesPrincipales(bool Lestado)
@@ -94,7 +94,7 @@ namespace Sol_Almacen.Presentacion
             Btn_buscar.Enabled = Lestado;
         }
         #endregion
-        private void Frm_Grupos_Load(object sender, EventArgs e)
+        private void Frm_Marcas_Load(object sender, EventArgs e)
         {
             this.Mostrar("%");
         }
@@ -108,22 +108,22 @@ namespace Sol_Almacen.Presentacion
         {
             try
             {
-                if (Txt_codigo_gr.Text == string.Empty && Txt_descripcion_gr.Text == string.Empty)
+                if (Txt_codigo_ma.Text == string.Empty && Txt_descripcion_ma.Text == string.Empty)
                 {
                     MessageBox.Show("Falta ingresar datos requeridos (*)", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    E_Grupos Egr = new E_Grupos();
+                    E_Marcas Ema = new E_Marcas();
                     string Cduplica, Rpta = "";
-                    Egr.Codigo_gr = Convert.ToInt32(Txt_codigo_gr.Text);                    
-                    Egr.Descripcion_gr = Txt_descripcion_gr.Text.Trim();
-                    Egr.Estado = true;
+                    Ema.Codigo_ma = Convert.ToInt32(Txt_codigo_ma.Text);                    
+                    Ema.Descripcion_ma = Txt_descripcion_ma.Text.Trim();
+                    Ema.Estado = true;
                     // Verificamos si la información que se intenta guardar ya existe en la tabla
-                    Cduplica = N_Grupos.Verifica_duplicado_gr(this.EstadoGuarda, Egr.Codigo_gr, Egr.Descripcion_gr);
+                    Cduplica = N_Marcas.Verifica_duplicado_ma(this.EstadoGuarda, Ema.Codigo_ma, Ema.Descripcion_ma);
                     if (Cduplica == "")
                     {
-                        Rpta = N_Grupos.Guardar_gr(this.EstadoGuarda, Egr);
+                        Rpta = N_Marcas.Guardar_ma(this.EstadoGuarda, Ema);
                         if (Rpta.Equals("OK"))
                         {
                             MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -156,7 +156,7 @@ namespace Sol_Almacen.Presentacion
             this.Estado_BotonesPrincipales(false);
             this.Estado_Limpiar(true);
             Tbp_general.SelectedIndex = 1;
-            Txt_descripcion_gr.Select();
+            Txt_descripcion_ma.Select();
         }
 
         private void Btn_cancelar_Click(object sender, EventArgs e)
@@ -176,7 +176,7 @@ namespace Sol_Almacen.Presentacion
                 this.Estado_Limpiar(true);
                 this.Selecciona_dgv();
                 Tbp_general.SelectedIndex = 1;
-                Txt_descripcion_gr.Select();
+                Txt_descripcion_ma.Select();
             }
 
         }
@@ -221,7 +221,7 @@ namespace Sol_Almacen.Presentacion
                         if (Convert.ToBoolean(row.Cells[0].Value))
                         {
                             Codigo = Convert.ToInt32(row.Cells[1].Value);
-                            Rpta = N_Grupos.Eliminar_gr(Codigo);
+                            Rpta = N_Marcas.Eliminar_ma(Codigo);
                             if (Rpta.Equals("OK"))
                             {
                                 // por definir que mensaje ubicar
