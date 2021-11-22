@@ -43,6 +43,7 @@ namespace Sol_Almacen.Presentacion
                 Dgv_Listado.DataSource = N_Unidades_Medidas.Mostrar_um(Ctexto);
                 this.Formato();
                 Lbl_total.Text = "Total registros: " + Convert.ToString(Dgv_Listado.Rows.Count);
+                Dgv_Listado.Select();
             }
             catch (Exception ex)
             {

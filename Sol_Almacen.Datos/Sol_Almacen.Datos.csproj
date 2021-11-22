@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="D_Almacenes.cs" />
+    <Compile Include="D_Articulos.cs" />
     <Compile Include="D_Grupos.cs" />
     <Compile Include="D_Marcas.cs" />
     <Compile Include="D_Rubros.cs" />

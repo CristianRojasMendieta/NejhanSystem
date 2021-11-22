@@ -40,8 +40,6 @@ namespace Sol_Almacen.Presentacion
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.Tbp_general = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Dgv_Listado = new System.Windows.Forms.DataGridView();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Btn_confirmar = new System.Windows.Forms.Button();
             this.Btn_cancelar2 = new System.Windows.Forms.Button();
             this.Btn_buscar = new System.Windows.Forms.Button();
@@ -60,11 +58,13 @@ namespace Sol_Almacen.Presentacion
             this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Btn_nuevo = new System.Windows.Forms.Button();
+            this.Dgv_Listado = new System.Windows.Forms.DataGridView();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             this.Tbp_general.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Listado)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Listado)).BeginInit();
             this.SuspendLayout();
             // 
             // Img_principal
@@ -139,55 +139,6 @@ namespace Sol_Almacen.Presentacion
             this.tabPage1.Size = new System.Drawing.Size(643, 391);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
-            // 
-            // Dgv_Listado
-            // 
-            this.Dgv_Listado.AllowUserToAddRows = false;
-            this.Dgv_Listado.AllowUserToDeleteRows = false;
-            this.Dgv_Listado.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.Dgv_Listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.Dgv_Listado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.Dgv_Listado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Dgv_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.Dgv_Listado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.Dgv_Listado.ColumnHeadersHeight = 30;
-            this.Dgv_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.Dgv_Listado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Seleccionar});
-            this.Dgv_Listado.EnableHeadersVisualStyles = false;
-            this.Dgv_Listado.GridColor = System.Drawing.Color.SteelBlue;
-            this.Dgv_Listado.Location = new System.Drawing.Point(7, 63);
-            this.Dgv_Listado.Name = "Dgv_Listado";
-            this.Dgv_Listado.ReadOnly = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgv_Listado.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.Dgv_Listado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dgv_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Listado.Size = new System.Drawing.Size(630, 277);
-            this.Dgv_Listado.TabIndex = 7;
-            this.Dgv_Listado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Listado_CellContentClick);
-            this.Dgv_Listado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Listado_CellDoubleClick);
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Seleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Btn_confirmar
             // 
@@ -449,6 +400,55 @@ namespace Sol_Almacen.Presentacion
             this.Btn_nuevo.UseVisualStyleBackColor = false;
             this.Btn_nuevo.Click += new System.EventHandler(this.Btn_nuevo_Click);
             // 
+            // Dgv_Listado
+            // 
+            this.Dgv_Listado.AllowUserToAddRows = false;
+            this.Dgv_Listado.AllowUserToDeleteRows = false;
+            this.Dgv_Listado.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.Dgv_Listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Dgv_Listado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Dgv_Listado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dgv_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.Dgv_Listado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.Dgv_Listado.ColumnHeadersHeight = 30;
+            this.Dgv_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Dgv_Listado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Seleccionar});
+            this.Dgv_Listado.EnableHeadersVisualStyles = false;
+            this.Dgv_Listado.GridColor = System.Drawing.Color.SteelBlue;
+            this.Dgv_Listado.Location = new System.Drawing.Point(6, 57);
+            this.Dgv_Listado.Name = "Dgv_Listado";
+            this.Dgv_Listado.ReadOnly = true;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgv_Listado.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgv_Listado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Dgv_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Dgv_Listado.Size = new System.Drawing.Size(630, 277);
+            this.Dgv_Listado.TabIndex = 8;
+            this.Dgv_Listado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Listado_CellContentClick);
+            this.Dgv_Listado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Listado_CellDoubleClick);
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Seleccionar";
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
+            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Seleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // Frm_Grupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,9 +469,9 @@ namespace Sol_Almacen.Presentacion
             this.Tbp_general.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Listado)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Listado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -484,8 +484,6 @@ namespace Sol_Almacen.Presentacion
         private System.Windows.Forms.Label lblTitleChildForm;
         private System.Windows.Forms.TabControl Tbp_general;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView Dgv_Listado;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
         private System.Windows.Forms.Button Btn_confirmar;
         private System.Windows.Forms.Button Btn_cancelar2;
         private System.Windows.Forms.Button Btn_buscar;
@@ -504,5 +502,7 @@ namespace Sol_Almacen.Presentacion
         private System.Windows.Forms.Button Btn_nuevo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Txt_descripcion_gr;
+        private System.Windows.Forms.DataGridView Dgv_Listado;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
     }
 }
