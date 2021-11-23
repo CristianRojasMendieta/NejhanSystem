@@ -45,6 +45,7 @@
     <Compile Include="N_Articulos.cs" />
     <Compile Include="N_Grupos.cs" />
     <Compile Include="N_Marcas.cs" />
+    <Compile Include="N_Proveedores.cs" />
     <Compile Include="N_Rubros.cs" />
     <Compile Include="N_SubGrupos.cs" />
     <Compile Include="N_Unidades_Medidas.cs" />
