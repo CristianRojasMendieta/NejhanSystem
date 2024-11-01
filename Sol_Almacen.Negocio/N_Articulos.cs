@@ -18,10 +18,10 @@ namespace Sol_Almacen.Negocio
             return Datos.Mostrar_ar(Valor);
         }
 
-        public static string Guardar_ar(int Nopcion, E_Articulos Oarticulos)
+        public static string Guardar_ar(int Nopcion, E_Articulos Oarticulos,DataTable TB_AL)
         {
             D_Articulos Datos = new D_Articulos();
-            return Datos.Guardar_ar(Nopcion, Oarticulos);
+            return Datos.Guardar_ar(Nopcion, Oarticulos,TB_AL);
         }
 
         public static string Eliminar_ar(int Ncodigo)
@@ -61,6 +61,12 @@ namespace Sol_Almacen.Negocio
         {
             D_Articulos Datos = new D_Articulos();
             return Datos.Listar_sg(Valor);
+        }
+
+        public static DataTable Mostrar_AL(int Nopcion, int Ncodigo)
+        {
+            D_Articulos Datos = new D_Articulos();
+            return Datos.Mostrar_AL(Nopcion, Ncodigo);
         }
     }
 }

@@ -21,6 +21,7 @@ namespace Sol_Almacen.Presentacion
 
         #region "Mis Variables"
         int EstadoGuarda = 0;
+        DataTable Dtdetalle = new DataTable();
         #endregion
 
         #region "Mis Métodos"
@@ -81,6 +82,9 @@ namespace Sol_Almacen.Presentacion
                 Txt_descripcion_ar.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["descripcion_ar"].Value);
                 Txt_stock_min.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["stock_min"].Value);
                 Txt_stock_max.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["stock_max"].Value);
+
+                this.Mostrar_al(this.EstadoGuarda, Convert.ToInt32(Txt_codigo_ar.Text));
+
             }
         }
 
@@ -203,10 +207,69 @@ namespace Sol_Almacen.Presentacion
             Txt_codigo_sg.Text = Convert.ToString(Dgv_Listado_sg.CurrentRow.Cells["codigo_sg"].Value);
             Txt_descripcion_sg.Text = Convert.ToString(Dgv_Listado_sg.CurrentRow.Cells["descripcion_sg"].Value);
         }
+
+        private void Crear_Tabla_al()
+        {
+            this.Dtdetalle = new DataTable("Detalle");
+            this.Dtdetalle.Columns.Add("Descripcion_al", System.Type.GetType("System.String"));
+            this.Dtdetalle.Columns.Add("Estado", System.Type.GetType("System.Boolean"));
+            this.Dtdetalle.Columns.Add("Codigo_al", System.Type.GetType("System.Int32"));
+
+            Dgv_almacenes.DataSource = this.Dtdetalle;
+
+            Dgv_almacenes.Columns[0].Width = 220;
+            Dgv_almacenes.Columns[0].HeaderText = "ALMACENES";
+            Dgv_almacenes.Columns[1].Width = 40;
+            Dgv_almacenes.Columns[1].HeaderText = "OK";
+            Dgv_almacenes.Columns[2].Visible = false;
+
+            Dgv_almacenes.Columns[0].ReadOnly = true;
+            Dgv_almacenes.Columns[1].ReadOnly = true;
+        }
+
+        private void Agregar_AL(string Descripcion_al, bool Estado, int Codigo_al)
+        {
+            DataRow Fila = Dtdetalle.NewRow();
+            Fila["Descripcion_al"] = Descripcion_al;
+            Fila["Estado"] = Estado;
+            Fila["Codigo_al"] = Codigo_al;
+            this.Dtdetalle.Rows.Add(Fila);
+        }
+
+        private void Mostrar_al(int Nopcion, int Ncodigo)
+        {
+            try
+            {
+                DataTable Tablatemp = new DataTable();
+                Tablatemp = N_Articulos.Mostrar_AL(Nopcion, Ncodigo);
+                Dtdetalle.Clear();
+                for (int Nfila = 0; Nfila <= Tablatemp.Rows.Count - 1; Nfila++)
+                {
+                    this.Agregar_AL(Convert.ToString(Tablatemp.Rows[Nfila][0]), Convert.ToBoolean(Tablatemp.Rows[Nfila][1]), Convert.ToInt32(Tablatemp.Rows[Nfila][2]));
+                }
+
+                Dgv_almacenes.DataSource = Dtdetalle;
+                if (Nopcion >= 1)
+                {
+                    Dgv_almacenes.Columns["estado"].ReadOnly = false;
+                }
+                else
+                {
+                    Dgv_almacenes.Columns["estado"].ReadOnly = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
         #endregion
         private void Frm_Articulos_Load(object sender, EventArgs e)
         {
             this.Mostrar("%");
+            this.Crear_Tabla_al();
         }
        
         private void Btn_buscar_Click(object sender, EventArgs e)
@@ -235,10 +298,12 @@ namespace Sol_Almacen.Presentacion
                     Ear.Stock_max = Convert.ToDecimal(Txt_stock_max.Text);
                     Ear.Estado = true;
                     // Verificamos si la información que se intenta guardar ya existe en la tabla
-                    Cduplica = N_Articulos.Verifica_duplicado_ar(this.EstadoGuarda, Ear.Codigo_ar, Ear.Descripcion_ar);
+                    //Cduplica = N_Articulos.Verifica_duplicado_ar(this.EstadoGuarda, Ear.Codigo_ar, Ear.Descripcion_ar);
+                    Cduplica = "";
                     if (Cduplica == "")
                     {
-                        Rpta = N_Articulos.Guardar_ar(this.EstadoGuarda, Ear);
+                        Dtdetalle.AcceptChanges();
+                        Rpta = N_Articulos.Guardar_ar(this.EstadoGuarda, Ear, Dtdetalle);
                         if (Rpta.Equals("OK"))
                         {
                             MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -271,6 +336,7 @@ namespace Sol_Almacen.Presentacion
             this.Estado_BotonesPrincipales(false);
             this.Estado_Limpiar(true);
             Tbp_general.SelectedIndex = 1;
+            this.Mostrar_al(this.EstadoGuarda, 0);
             Txt_descripcion_ar.Select();
         }
 
@@ -463,6 +529,13 @@ namespace Sol_Almacen.Presentacion
             }
             Btn_cancelar2.Visible = false;
             Btn_confirmar.Visible = false;
+        }
+
+        private void Btn_reporte_Click_1(object sender, EventArgs e)
+        {
+            Reportes.Frm_Rpt_Articulos ORpt_ar = new Reportes.Frm_Rpt_Articulos();
+            ORpt_ar.Txt_p1.Text = Txt_buscar.Text;
+            ORpt_ar.ShowDialog();
         }
     }
 }

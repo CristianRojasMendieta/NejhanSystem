@@ -7,11 +7,27 @@
     <ProjectGuid>{36DCA507-6BD8-42DD-8316-6DA77CF69508}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Sol_Almacen.Presentacion</RootNamespace>
-    <AssemblyName>Sol_Almacen.Presentacion</AssemblyName>
+    <AssemblyName>Sistema de Almacén</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Developer\Instaladores\SistemadeAlmacen\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,12 +48,49 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>almacen.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>66E100C7CC930CE601C591C534EE9EB1C7CF6EE1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Sol_Almacen.Presentacion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Sol_Almacen.Presentacion.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,11 +102,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Busqueda\Frm_Buscar_ar2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busqueda\Frm_Buscar_ar2.Designer.cs">
+      <DependentUpon>Frm_Buscar_ar2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busqueda\Frm_Buscar_ar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busqueda\Frm_Buscar_ar.Designer.cs">
+      <DependentUpon>Frm_Buscar_ar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busqueda\MisVariables_Buscar.cs" />
+    <Compile Include="Controles\Frm_ActualizarPasswordUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\Frm_ActualizarPasswordUsuario.Designer.cs">
+      <DependentUpon>Frm_ActualizarPasswordUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Almacenes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Almacenes.Designer.cs">
       <DependentUpon>Frm_Almacenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Inventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Inventarios.Designer.cs">
+      <DependentUpon>Frm_Inventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Reportes.Designer.cs">
+      <DependentUpon>Frm_Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Reportes_Personalizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Reportes_Personalizados.Designer.cs">
+      <DependentUpon>Frm_Reportes_Personalizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Uso_Insumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Uso_Insumos.Designer.cs">
+      <DependentUpon>Frm_Uso_Insumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Salida_Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Salida_Articulos.Designer.cs">
+      <DependentUpon>Frm_Salida_Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Entrada_Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Entrada_Articulos.Designer.cs">
+      <DependentUpon>Frm_Entrada_Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_login.Designer.cs">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_MiDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_MiDashBoard.Designer.cs">
+      <DependentUpon>Frm_MiDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Proveedores.cs">
       <SubType>Form</SubType>
@@ -66,6 +186,18 @@
     </Compile>
     <Compile Include="Frm_Articulos.Designer.cs">
       <DependentUpon>Frm_Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Recuperar_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Recuperar_Password.Designer.cs">
+      <DependentUpon>Frm_Recuperar_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Stock_Actual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Stock_Actual.Designer.cs">
+      <DependentUpon>Frm_Stock_Actual.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_SubGrupos.cs">
       <SubType>Form</SubType>
@@ -97,16 +229,120 @@
     <Compile Include="Frm_Unidades_Medidas.Designer.cs">
       <DependentUpon>Frm_Unidades_Medidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="MisVariables.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\DataSet_MiAlmacen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_MiAlmacen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Articulos.Designer.cs">
+      <DependentUpon>Frm_Rpt_Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Imprimir_Entrada_Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Imprimir_Entrada_Articulos.Designer.cs">
+      <DependentUpon>Frm_Rpt_Imprimir_Entrada_Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Imprimir_Inventario_inicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Imprimir_Inventario_inicial.Designer.cs">
+      <DependentUpon>Frm_Rpt_Imprimir_Inventario_inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Imprimir_Salida_Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Imprimir_Salida_Articulos.Designer.cs">
+      <DependentUpon>Frm_Rpt_Imprimir_Salida_Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_libre\DataSet_Reportes_libre.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Reportes_libre.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_libre\Frm_Rpt_Libre_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_libre\Frm_Rpt_Libre_01.Designer.cs">
+      <DependentUpon>Frm_Rpt_Libre_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Personalizados\DataSet_Reportes_Personalizados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Reportes_Personalizados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Personalizados\Frm_Rpt_Personalizado_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Personalizados\Frm_Rpt_Personalizado_01.Designer.cs">
+      <DependentUpon>Frm_Rpt_Personalizado_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Personalizados\Frm_Rpt_Personalizado_02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Personalizados\Frm_Rpt_Personalizado_02.Designer.cs">
+      <DependentUpon>Frm_Rpt_Personalizado_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Personalizados\Frm_Rpt_Personalizado_03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Personalizados\Frm_Rpt_Personalizado_03.Designer.cs">
+      <DependentUpon>Frm_Rpt_Personalizado_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Busqueda\Frm_Buscar_ar2.resx">
+      <DependentUpon>Frm_Buscar_ar2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busqueda\Frm_Buscar_ar.resx">
+      <DependentUpon>Frm_Buscar_ar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Frm_ActualizarPasswordUsuario.resx">
+      <DependentUpon>Frm_ActualizarPasswordUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Almacenes.resx">
       <DependentUpon>Frm_Almacenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Inventarios.resx">
+      <DependentUpon>Frm_Inventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Reportes.resx">
+      <DependentUpon>Frm_Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Reportes_Personalizados.resx">
+      <DependentUpon>Frm_Reportes_Personalizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Uso_Insumos.resx">
+      <DependentUpon>Frm_Uso_Insumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Salida_Articulos.resx">
+      <DependentUpon>Frm_Salida_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Entrada_Articulos.resx">
+      <DependentUpon>Frm_Entrada_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_login.resx">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MiDashBoard.resx">
+      <DependentUpon>Frm_MiDashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Proveedores.resx">
       <DependentUpon>Frm_Proveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Articulos.resx">
       <DependentUpon>Frm_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Recuperar_Password.resx">
+      <DependentUpon>Frm_Recuperar_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Stock_Actual.resx">
+      <DependentUpon>Frm_Stock_Actual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_SubGrupos.resx">
       <DependentUpon>Frm_SubGrupos.cs</DependentUpon>
@@ -132,6 +368,38 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\Frm_Rpt_Articulos.resx">
+      <DependentUpon>Frm_Rpt_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_Rpt_Imprimir_Entrada_Articulos.resx">
+      <DependentUpon>Frm_Rpt_Imprimir_Entrada_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_Rpt_Imprimir_Inventario_inicial.resx">
+      <DependentUpon>Frm_Rpt_Imprimir_Inventario_inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_Rpt_Imprimir_Salida_Articulos.resx">
+      <DependentUpon>Frm_Rpt_Imprimir_Salida_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Rpt_Imprimir_Entrada_Articulos.rdlc" />
+    <EmbeddedResource Include="Reportes_libre\Frm_Rpt_Libre_01.resx">
+      <DependentUpon>Frm_Rpt_Libre_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_libre\Rpt_Reporte_libre_01.rdlc" />
+    <EmbeddedResource Include="Reportes\Rpt_Articulos.rdlc" />
+    <EmbeddedResource Include="Reportes\Rpt_Imprimir_Inventario_inicial.rdlc" />
+    <EmbeddedResource Include="Reportes\Rpt_Imprimir_Salida_Articulos.rdlc" />
+    <EmbeddedResource Include="Reportes_Personalizados\Frm_Rpt_Personalizado_01.resx">
+      <DependentUpon>Frm_Rpt_Personalizado_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Personalizados\Frm_Rpt_Personalizado_02.resx">
+      <DependentUpon>Frm_Rpt_Personalizado_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Personalizados\Frm_Rpt_Personalizado_03.resx">
+      <DependentUpon>Frm_Rpt_Personalizado_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Personalizados\Rpt_Reporte_personalizado_01.rdlc" />
+    <EmbeddedResource Include="Reportes_Personalizados\Rpt_Reporte_personalizado_02.rdlc" />
+    <EmbeddedResource Include="Reportes_Personalizados\Rpt_Reporte_personalizado_03.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -142,6 +410,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reportes\DataSet_MiAlmacen.xsc">
+      <DependentUpon>DataSet_MiAlmacen.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSet_MiAlmacen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_MiAlmacen.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSet_MiAlmacen.xss">
+      <DependentUpon>DataSet_MiAlmacen.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes_libre\DataSet_Reportes_libre.xsc">
+      <DependentUpon>DataSet_Reportes_libre.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes_libre\DataSet_Reportes_libre.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Reportes_libre.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes_libre\DataSet_Reportes_libre.xss">
+      <DependentUpon>DataSet_Reportes_libre.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes_Personalizados\DataSet_Reportes_Personalizados.xsc">
+      <DependentUpon>DataSet_Reportes_Personalizados.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes_Personalizados\DataSet_Reportes_Personalizados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Reportes_Personalizados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes_Personalizados\DataSet_Reportes_Personalizados.xss">
+      <DependentUpon>DataSet_Reportes_Personalizados.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -155,6 +456,34 @@
       <Project>{16b7286c-7445-48e5-bd5a-ad680eb38bfb}</Project>
       <Name>Sol_Almacen.Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="almacen.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,9 +19,9 @@ namespace Sol_Almacen.Datos
         private Conexion()
         {
             this.Base = "BD_MIALMACEN";
-            this.Servidor = "CENS03\\SQLEXPRESS";
-            this.Usuario = "mklvr";
-            this.Clave = "Xvitox2013";
+            this.Servidor = "cristian\\SQLEXPRESS";           
+            this.Usuario = "prueba_user";
+            this.Clave = "sistema1234";
             this.Seguridad = false;
         }
 

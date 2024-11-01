@@ -43,12 +43,20 @@
   <ItemGroup>
     <Compile Include="N_Almacenes.cs" />
     <Compile Include="N_Articulos.cs" />
+    <Compile Include="N_Entrada_Articulos.cs" />
     <Compile Include="N_Grupos.cs" />
+    <Compile Include="N_Inventarios.cs" />
+    <Compile Include="N_login.cs" />
     <Compile Include="N_Marcas.cs" />
     <Compile Include="N_Proveedores.cs" />
+    <Compile Include="N_Reportes.cs" />
+    <Compile Include="N_ReportesPersonalizados.cs" />
     <Compile Include="N_Rubros.cs" />
+    <Compile Include="N_Salida_Articulos.cs" />
+    <Compile Include="N_Stock_Actual.cs" />
     <Compile Include="N_SubGrupos.cs" />
     <Compile Include="N_Unidades_Medidas.cs" />
+    <Compile Include="N_Uso_Insumos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

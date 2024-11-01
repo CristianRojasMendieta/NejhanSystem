@@ -31,9 +31,9 @@ namespace Sol_Almacen.Presentacion
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Unidades_Medidas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Img_principal = new System.Windows.Forms.ImageList(this.components);
             this.Img_procesos = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -123,7 +123,7 @@ namespace Sol_Almacen.Presentacion
             this.Tbp_general.Location = new System.Drawing.Point(12, 79);
             this.Tbp_general.Name = "Tbp_general";
             this.Tbp_general.SelectedIndex = 0;
-            this.Tbp_general.Size = new System.Drawing.Size(651, 431);
+            this.Tbp_general.Size = new System.Drawing.Size(651, 353);
             this.Tbp_general.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.Tbp_general.TabIndex = 13;
             // 
@@ -138,7 +138,7 @@ namespace Sol_Almacen.Presentacion
             this.tabPage1.Location = new System.Drawing.Point(4, 36);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(643, 391);
+            this.tabPage1.Size = new System.Drawing.Size(643, 313);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             // 
@@ -147,21 +147,21 @@ namespace Sol_Almacen.Presentacion
             this.Dgv_Listado.AllowUserToAddRows = false;
             this.Dgv_Listado.AllowUserToDeleteRows = false;
             this.Dgv_Listado.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.Dgv_Listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.Dgv_Listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_Listado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Dgv_Listado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.Dgv_Listado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Dgv_Listado.ColumnHeadersHeight = 30;
             this.Dgv_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_Listado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -171,14 +171,14 @@ namespace Sol_Almacen.Presentacion
             this.Dgv_Listado.Location = new System.Drawing.Point(7, 63);
             this.Dgv_Listado.Name = "Dgv_Listado";
             this.Dgv_Listado.ReadOnly = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgv_Listado.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgv_Listado.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.Dgv_Listado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Dgv_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Listado.Size = new System.Drawing.Size(630, 277);
+            this.Dgv_Listado.Size = new System.Drawing.Size(630, 204);
             this.Dgv_Listado.TabIndex = 7;
             this.Dgv_Listado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Listado_CellContentClick);
             this.Dgv_Listado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Listado_CellDoubleClick);
@@ -199,7 +199,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_confirmar.ForeColor = System.Drawing.Color.White;
             this.Btn_confirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_confirmar.Location = new System.Drawing.Point(124, 356);
+            this.Btn_confirmar.Location = new System.Drawing.Point(124, 276);
             this.Btn_confirmar.Name = "Btn_confirmar";
             this.Btn_confirmar.Size = new System.Drawing.Size(110, 30);
             this.Btn_confirmar.TabIndex = 6;
@@ -216,7 +216,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_cancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_cancelar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.Btn_cancelar2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_cancelar2.Location = new System.Drawing.Point(7, 356);
+            this.Btn_cancelar2.Location = new System.Drawing.Point(7, 276);
             this.Btn_cancelar2.Name = "Btn_cancelar2";
             this.Btn_cancelar2.Size = new System.Drawing.Size(110, 30);
             this.Btn_cancelar2.TabIndex = 5;
@@ -250,7 +250,7 @@ namespace Sol_Almacen.Presentacion
             // Lbl_total
             // 
             this.Lbl_total.AutoSize = true;
-            this.Lbl_total.Location = new System.Drawing.Point(492, 356);
+            this.Lbl_total.Location = new System.Drawing.Point(472, 276);
             this.Lbl_total.Name = "Lbl_total";
             this.Lbl_total.Size = new System.Drawing.Size(34, 13);
             this.Lbl_total.TabIndex = 1;
@@ -270,7 +270,7 @@ namespace Sol_Almacen.Presentacion
             this.tabPage2.Location = new System.Drawing.Point(4, 36);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(643, 391);
+            this.tabPage2.Size = new System.Drawing.Size(643, 313);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             // 
@@ -387,7 +387,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_salir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_salir.ImageKey = "salir.ico";
             this.Btn_salir.ImageList = this.Img_principal;
-            this.Btn_salir.Location = new System.Drawing.Point(336, 532);
+            this.Btn_salir.Location = new System.Drawing.Point(338, 436);
             this.Btn_salir.Name = "Btn_salir";
             this.Btn_salir.Size = new System.Drawing.Size(75, 56);
             this.Btn_salir.TabIndex = 18;
@@ -406,7 +406,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_reporte.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_reporte.ImageKey = "reporte.ico";
             this.Btn_reporte.ImageList = this.Img_principal;
-            this.Btn_reporte.Location = new System.Drawing.Point(255, 532);
+            this.Btn_reporte.Location = new System.Drawing.Point(257, 436);
             this.Btn_reporte.Name = "Btn_reporte";
             this.Btn_reporte.Size = new System.Drawing.Size(75, 56);
             this.Btn_reporte.TabIndex = 17;
@@ -424,7 +424,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_eliminar.ImageKey = "eliminar.ico";
             this.Btn_eliminar.ImageList = this.Img_principal;
-            this.Btn_eliminar.Location = new System.Drawing.Point(174, 532);
+            this.Btn_eliminar.Location = new System.Drawing.Point(176, 436);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(75, 56);
             this.Btn_eliminar.TabIndex = 16;
@@ -443,7 +443,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_actualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_actualizar.ImageKey = "actualizar.ico";
             this.Btn_actualizar.ImageList = this.Img_principal;
-            this.Btn_actualizar.Location = new System.Drawing.Point(93, 532);
+            this.Btn_actualizar.Location = new System.Drawing.Point(95, 436);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(75, 56);
             this.Btn_actualizar.TabIndex = 15;
@@ -462,7 +462,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_nuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_nuevo.ImageKey = "nuevo.ico";
             this.Btn_nuevo.ImageList = this.Img_principal;
-            this.Btn_nuevo.Location = new System.Drawing.Point(12, 532);
+            this.Btn_nuevo.Location = new System.Drawing.Point(14, 436);
             this.Btn_nuevo.Name = "Btn_nuevo";
             this.Btn_nuevo.Size = new System.Drawing.Size(75, 56);
             this.Btn_nuevo.TabIndex = 14;

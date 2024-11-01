@@ -31,18 +31,21 @@ namespace Sol_Almacen.Presentacion
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Articulos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Img_principal = new System.Windows.Forms.ImageList(this.components);
             this.Img_procesos = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,6 +60,7 @@ namespace Sol_Almacen.Presentacion
             this.Txt_buscar = new System.Windows.Forms.TextBox();
             this.Lbl_total = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Dgv_almacenes = new System.Windows.Forms.DataGridView();
             this.Pnl_listado_sg = new System.Windows.Forms.Panel();
             this.Dgv_Listado_sg = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
@@ -108,6 +112,7 @@ namespace Sol_Almacen.Presentacion
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Listado)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_almacenes)).BeginInit();
             this.Pnl_listado_sg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Listado_sg)).BeginInit();
             this.Pnl_listado_um.SuspendLayout();
@@ -167,10 +172,10 @@ namespace Sol_Almacen.Presentacion
             this.Tbp_general.Controls.Add(this.tabPage1);
             this.Tbp_general.Controls.Add(this.tabPage2);
             this.Tbp_general.ItemSize = new System.Drawing.Size(96, 32);
-            this.Tbp_general.Location = new System.Drawing.Point(12, 79);
+            this.Tbp_general.Location = new System.Drawing.Point(12, 48);
             this.Tbp_general.Name = "Tbp_general";
             this.Tbp_general.SelectedIndex = 0;
-            this.Tbp_general.Size = new System.Drawing.Size(1065, 431);
+            this.Tbp_general.Size = new System.Drawing.Size(1065, 382);
             this.Tbp_general.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.Tbp_general.TabIndex = 13;
             // 
@@ -185,7 +190,7 @@ namespace Sol_Almacen.Presentacion
             this.tabPage1.Location = new System.Drawing.Point(4, 36);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1057, 391);
+            this.tabPage1.Size = new System.Drawing.Size(1057, 342);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             // 
@@ -194,21 +199,21 @@ namespace Sol_Almacen.Presentacion
             this.Dgv_Listado.AllowUserToAddRows = false;
             this.Dgv_Listado.AllowUserToDeleteRows = false;
             this.Dgv_Listado.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.Dgv_Listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.Dgv_Listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_Listado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Dgv_Listado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.Dgv_Listado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_Listado.ColumnHeadersHeight = 30;
             this.Dgv_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_Listado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -218,14 +223,14 @@ namespace Sol_Almacen.Presentacion
             this.Dgv_Listado.Location = new System.Drawing.Point(7, 63);
             this.Dgv_Listado.Name = "Dgv_Listado";
             this.Dgv_Listado.ReadOnly = true;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgv_Listado.RowsDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgv_Listado.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_Listado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Dgv_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Listado.Size = new System.Drawing.Size(1033, 277);
+            this.Dgv_Listado.Size = new System.Drawing.Size(1033, 231);
             this.Dgv_Listado.TabIndex = 7;
             this.Dgv_Listado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Listado_CellContentClick);
             this.Dgv_Listado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Listado_CellDoubleClick);
@@ -246,7 +251,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_confirmar.ForeColor = System.Drawing.Color.White;
             this.Btn_confirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_confirmar.Location = new System.Drawing.Point(124, 356);
+            this.Btn_confirmar.Location = new System.Drawing.Point(124, 304);
             this.Btn_confirmar.Name = "Btn_confirmar";
             this.Btn_confirmar.Size = new System.Drawing.Size(110, 30);
             this.Btn_confirmar.TabIndex = 6;
@@ -263,7 +268,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_cancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_cancelar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.Btn_cancelar2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_cancelar2.Location = new System.Drawing.Point(7, 356);
+            this.Btn_cancelar2.Location = new System.Drawing.Point(7, 304);
             this.Btn_cancelar2.Name = "Btn_cancelar2";
             this.Btn_cancelar2.Size = new System.Drawing.Size(110, 30);
             this.Btn_cancelar2.TabIndex = 5;
@@ -297,7 +302,7 @@ namespace Sol_Almacen.Presentacion
             // Lbl_total
             // 
             this.Lbl_total.AutoSize = true;
-            this.Lbl_total.Location = new System.Drawing.Point(951, 356);
+            this.Lbl_total.Location = new System.Drawing.Point(951, 304);
             this.Lbl_total.Name = "Lbl_total";
             this.Lbl_total.Size = new System.Drawing.Size(34, 13);
             this.Lbl_total.TabIndex = 1;
@@ -305,6 +310,7 @@ namespace Sol_Almacen.Presentacion
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.Dgv_almacenes);
             this.tabPage2.Controls.Add(this.Pnl_listado_sg);
             this.tabPage2.Controls.Add(this.Pnl_listado_um);
             this.tabPage2.Controls.Add(this.Pnl_listado_ma);
@@ -334,9 +340,45 @@ namespace Sol_Almacen.Presentacion
             this.tabPage2.Location = new System.Drawing.Point(4, 36);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1057, 391);
+            this.tabPage2.Size = new System.Drawing.Size(1057, 342);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
+            // 
+            // Dgv_almacenes
+            // 
+            this.Dgv_almacenes.AllowUserToAddRows = false;
+            this.Dgv_almacenes.AllowUserToDeleteRows = false;
+            this.Dgv_almacenes.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(246)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.Dgv_almacenes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.Dgv_almacenes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Dgv_almacenes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dgv_almacenes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.Dgv_almacenes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_almacenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.Dgv_almacenes.ColumnHeadersHeight = 30;
+            this.Dgv_almacenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Dgv_almacenes.EnableHeadersVisualStyles = false;
+            this.Dgv_almacenes.GridColor = System.Drawing.Color.SteelBlue;
+            this.Dgv_almacenes.Location = new System.Drawing.Point(704, 25);
+            this.Dgv_almacenes.Name = "Dgv_almacenes";
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgv_almacenes.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.Dgv_almacenes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Dgv_almacenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Dgv_almacenes.Size = new System.Drawing.Size(322, 262);
+            this.Dgv_almacenes.TabIndex = 46;
             // 
             // Pnl_listado_sg
             // 
@@ -346,9 +388,9 @@ namespace Sol_Almacen.Presentacion
             this.Pnl_listado_sg.Controls.Add(this.Btn_retornar_sg);
             this.Pnl_listado_sg.Controls.Add(this.Btn_buscar_sg);
             this.Pnl_listado_sg.Controls.Add(this.Txt_buscar_sg);
-            this.Pnl_listado_sg.Location = new System.Drawing.Point(655, 363);
+            this.Pnl_listado_sg.Location = new System.Drawing.Point(528, 308);
             this.Pnl_listado_sg.Name = "Pnl_listado_sg";
-            this.Pnl_listado_sg.Size = new System.Drawing.Size(580, 351);
+            this.Pnl_listado_sg.Size = new System.Drawing.Size(580, 276);
             this.Pnl_listado_sg.TabIndex = 33;
             this.Pnl_listado_sg.Visible = false;
             // 
@@ -357,21 +399,21 @@ namespace Sol_Almacen.Presentacion
             this.Dgv_Listado_sg.AllowUserToAddRows = false;
             this.Dgv_Listado_sg.AllowUserToDeleteRows = false;
             this.Dgv_Listado_sg.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.Dgv_Listado_sg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.Dgv_Listado_sg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.Dgv_Listado_sg.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Dgv_Listado_sg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_Listado_sg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.Dgv_Listado_sg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Listado_sg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Listado_sg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.Dgv_Listado_sg.ColumnHeadersHeight = 30;
             this.Dgv_Listado_sg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_Listado_sg.EnableHeadersVisualStyles = false;
@@ -379,14 +421,14 @@ namespace Sol_Almacen.Presentacion
             this.Dgv_Listado_sg.Location = new System.Drawing.Point(13, 74);
             this.Dgv_Listado_sg.Name = "Dgv_Listado_sg";
             this.Dgv_Listado_sg.ReadOnly = true;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgv_Listado_sg.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgv_Listado_sg.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.Dgv_Listado_sg.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Dgv_Listado_sg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Listado_sg.Size = new System.Drawing.Size(553, 251);
+            this.Dgv_Listado_sg.Size = new System.Drawing.Size(553, 188);
             this.Dgv_Listado_sg.TabIndex = 20;
             this.Dgv_Listado_sg.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Listado_sg_CellDoubleClick);
             // 
@@ -450,9 +492,9 @@ namespace Sol_Almacen.Presentacion
             this.Pnl_listado_um.Controls.Add(this.Btn_retornar_um);
             this.Pnl_listado_um.Controls.Add(this.Btn_buscar_um);
             this.Pnl_listado_um.Controls.Add(this.Txt_buscar_um);
-            this.Pnl_listado_um.Location = new System.Drawing.Point(375, 363);
+            this.Pnl_listado_um.Location = new System.Drawing.Point(239, 309);
             this.Pnl_listado_um.Name = "Pnl_listado_um";
-            this.Pnl_listado_um.Size = new System.Drawing.Size(274, 284);
+            this.Pnl_listado_um.Size = new System.Drawing.Size(274, 226);
             this.Pnl_listado_um.TabIndex = 45;
             this.Pnl_listado_um.Visible = false;
             // 
@@ -461,21 +503,21 @@ namespace Sol_Almacen.Presentacion
             this.Dgv_Listado_um.AllowUserToAddRows = false;
             this.Dgv_Listado_um.AllowUserToDeleteRows = false;
             this.Dgv_Listado_um.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.Dgv_Listado_um.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.Dgv_Listado_um.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.Dgv_Listado_um.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Dgv_Listado_um.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_Listado_um.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.Dgv_Listado_um.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Listado_um.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Listado_um.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.Dgv_Listado_um.ColumnHeadersHeight = 30;
             this.Dgv_Listado_um.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_Listado_um.EnableHeadersVisualStyles = false;
@@ -483,14 +525,14 @@ namespace Sol_Almacen.Presentacion
             this.Dgv_Listado_um.Location = new System.Drawing.Point(13, 74);
             this.Dgv_Listado_um.Name = "Dgv_Listado_um";
             this.Dgv_Listado_um.ReadOnly = true;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgv_Listado_um.RowsDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgv_Listado_um.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.Dgv_Listado_um.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Dgv_Listado_um.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Listado_um.Size = new System.Drawing.Size(245, 191);
+            this.Dgv_Listado_um.Size = new System.Drawing.Size(245, 137);
             this.Dgv_Listado_um.TabIndex = 20;
             this.Dgv_Listado_um.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Listado_um_CellDoubleClick);
             // 
@@ -554,9 +596,9 @@ namespace Sol_Almacen.Presentacion
             this.Pnl_listado_ma.Controls.Add(this.Btn_retornar_ma);
             this.Pnl_listado_ma.Controls.Add(this.Btn_buscar_ma);
             this.Pnl_listado_ma.Controls.Add(this.Txt_buscar_ma);
-            this.Pnl_listado_ma.Location = new System.Drawing.Point(417, 6);
+            this.Pnl_listado_ma.Location = new System.Drawing.Point(353, 8);
             this.Pnl_listado_ma.Name = "Pnl_listado_ma";
-            this.Pnl_listado_ma.Size = new System.Drawing.Size(333, 351);
+            this.Pnl_listado_ma.Size = new System.Drawing.Size(328, 259);
             this.Pnl_listado_ma.TabIndex = 32;
             this.Pnl_listado_ma.Visible = false;
             // 
@@ -565,21 +607,21 @@ namespace Sol_Almacen.Presentacion
             this.Dgv_Listado_ma.AllowUserToAddRows = false;
             this.Dgv_Listado_ma.AllowUserToDeleteRows = false;
             this.Dgv_Listado_ma.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.Dgv_Listado_ma.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.Dgv_Listado_ma.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.Dgv_Listado_ma.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Dgv_Listado_ma.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_Listado_ma.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.Dgv_Listado_ma.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Listado_ma.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(99)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Listado_ma.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.Dgv_Listado_ma.ColumnHeadersHeight = 30;
             this.Dgv_Listado_ma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_Listado_ma.EnableHeadersVisualStyles = false;
@@ -587,14 +629,14 @@ namespace Sol_Almacen.Presentacion
             this.Dgv_Listado_ma.Location = new System.Drawing.Point(13, 74);
             this.Dgv_Listado_ma.Name = "Dgv_Listado_ma";
             this.Dgv_Listado_ma.ReadOnly = true;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgv_Listado_ma.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgv_Listado_ma.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.Dgv_Listado_ma.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Dgv_Listado_ma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Listado_ma.Size = new System.Drawing.Size(300, 251);
+            this.Dgv_Listado_ma.Size = new System.Drawing.Size(300, 170);
             this.Dgv_Listado_ma.TabIndex = 20;
             this.Dgv_Listado_ma.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Listado_ma_CellDoubleClick);
             // 
@@ -653,7 +695,7 @@ namespace Sol_Almacen.Presentacion
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(50, 288);
+            this.label8.Location = new System.Drawing.Point(50, 250);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 13);
             this.label8.TabIndex = 44;
@@ -661,7 +703,7 @@ namespace Sol_Almacen.Presentacion
             // 
             // Txt_stock_max
             // 
-            this.Txt_stock_max.Location = new System.Drawing.Point(127, 285);
+            this.Txt_stock_max.Location = new System.Drawing.Point(127, 247);
             this.Txt_stock_max.MaxLength = 10;
             this.Txt_stock_max.Name = "Txt_stock_max";
             this.Txt_stock_max.ReadOnly = true;
@@ -672,7 +714,7 @@ namespace Sol_Almacen.Presentacion
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(50, 248);
+            this.label7.Location = new System.Drawing.Point(50, 210);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 42;
@@ -680,7 +722,7 @@ namespace Sol_Almacen.Presentacion
             // 
             // Txt_stock_min
             // 
-            this.Txt_stock_min.Location = new System.Drawing.Point(127, 245);
+            this.Txt_stock_min.Location = new System.Drawing.Point(127, 207);
             this.Txt_stock_min.MaxLength = 10;
             this.Txt_stock_min.Name = "Txt_stock_min";
             this.Txt_stock_min.ReadOnly = true;
@@ -698,7 +740,7 @@ namespace Sol_Almacen.Presentacion
             this.btn_lupa3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_lupa3.ImageKey = "lupa.png";
             this.btn_lupa3.ImageList = this.Img_procesos;
-            this.btn_lupa3.Location = new System.Drawing.Point(375, 198);
+            this.btn_lupa3.Location = new System.Drawing.Point(375, 160);
             this.btn_lupa3.Name = "btn_lupa3";
             this.btn_lupa3.Size = new System.Drawing.Size(34, 30);
             this.btn_lupa3.TabIndex = 37;
@@ -708,7 +750,7 @@ namespace Sol_Almacen.Presentacion
             // 
             // Txt_codigo_sg
             // 
-            this.Txt_codigo_sg.Location = new System.Drawing.Point(381, 204);
+            this.Txt_codigo_sg.Location = new System.Drawing.Point(381, 166);
             this.Txt_codigo_sg.Name = "Txt_codigo_sg";
             this.Txt_codigo_sg.Size = new System.Drawing.Size(100, 20);
             this.Txt_codigo_sg.TabIndex = 40;
@@ -716,7 +758,7 @@ namespace Sol_Almacen.Presentacion
             // 
             // Txt_descripcion_sg
             // 
-            this.Txt_descripcion_sg.Location = new System.Drawing.Point(127, 204);
+            this.Txt_descripcion_sg.Location = new System.Drawing.Point(127, 166);
             this.Txt_descripcion_sg.Name = "Txt_descripcion_sg";
             this.Txt_descripcion_sg.ReadOnly = true;
             this.Txt_descripcion_sg.Size = new System.Drawing.Size(237, 20);
@@ -725,7 +767,7 @@ namespace Sol_Almacen.Presentacion
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(52, 207);
+            this.label6.Location = new System.Drawing.Point(52, 169);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 38;
@@ -741,7 +783,7 @@ namespace Sol_Almacen.Presentacion
             this.btn_lupa2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_lupa2.ImageKey = "lupa.png";
             this.btn_lupa2.ImageList = this.Img_procesos;
-            this.btn_lupa2.Location = new System.Drawing.Point(375, 153);
+            this.btn_lupa2.Location = new System.Drawing.Point(375, 115);
             this.btn_lupa2.Name = "btn_lupa2";
             this.btn_lupa2.Size = new System.Drawing.Size(34, 30);
             this.btn_lupa2.TabIndex = 33;
@@ -751,7 +793,7 @@ namespace Sol_Almacen.Presentacion
             // 
             // Txt_codigo_um
             // 
-            this.Txt_codigo_um.Location = new System.Drawing.Point(381, 159);
+            this.Txt_codigo_um.Location = new System.Drawing.Point(381, 121);
             this.Txt_codigo_um.Name = "Txt_codigo_um";
             this.Txt_codigo_um.Size = new System.Drawing.Size(100, 20);
             this.Txt_codigo_um.TabIndex = 36;
@@ -759,7 +801,7 @@ namespace Sol_Almacen.Presentacion
             // 
             // Txt_descripcion_um
             // 
-            this.Txt_descripcion_um.Location = new System.Drawing.Point(127, 159);
+            this.Txt_descripcion_um.Location = new System.Drawing.Point(127, 121);
             this.Txt_descripcion_um.Name = "Txt_descripcion_um";
             this.Txt_descripcion_um.ReadOnly = true;
             this.Txt_descripcion_um.Size = new System.Drawing.Size(237, 20);
@@ -768,7 +810,7 @@ namespace Sol_Almacen.Presentacion
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(71, 162);
+            this.label5.Location = new System.Drawing.Point(71, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 34;
@@ -784,7 +826,7 @@ namespace Sol_Almacen.Presentacion
             this.btn_lupa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_lupa.ImageKey = "lupa.png";
             this.btn_lupa.ImageList = this.Img_procesos;
-            this.btn_lupa.Location = new System.Drawing.Point(375, 111);
+            this.btn_lupa.Location = new System.Drawing.Point(375, 73);
             this.btn_lupa.Name = "btn_lupa";
             this.btn_lupa.Size = new System.Drawing.Size(34, 30);
             this.btn_lupa.TabIndex = 20;
@@ -794,7 +836,7 @@ namespace Sol_Almacen.Presentacion
             // 
             // Txt_codigo_ma
             // 
-            this.Txt_codigo_ma.Location = new System.Drawing.Point(381, 117);
+            this.Txt_codigo_ma.Location = new System.Drawing.Point(381, 79);
             this.Txt_codigo_ma.Name = "Txt_codigo_ma";
             this.Txt_codigo_ma.Size = new System.Drawing.Size(100, 20);
             this.Txt_codigo_ma.TabIndex = 31;
@@ -802,7 +844,7 @@ namespace Sol_Almacen.Presentacion
             // 
             // Txt_descripcion_ma
             // 
-            this.Txt_descripcion_ma.Location = new System.Drawing.Point(127, 117);
+            this.Txt_descripcion_ma.Location = new System.Drawing.Point(127, 79);
             this.Txt_descripcion_ma.Name = "Txt_descripcion_ma";
             this.Txt_descripcion_ma.ReadOnly = true;
             this.Txt_descripcion_ma.Size = new System.Drawing.Size(237, 20);
@@ -811,7 +853,7 @@ namespace Sol_Almacen.Presentacion
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 120);
+            this.label2.Location = new System.Drawing.Point(71, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 28;
@@ -820,7 +862,7 @@ namespace Sol_Almacen.Presentacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 83);
+            this.label3.Location = new System.Drawing.Point(58, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 27;
@@ -828,7 +870,7 @@ namespace Sol_Almacen.Presentacion
             // 
             // Txt_descripcion_ar
             // 
-            this.Txt_descripcion_ar.Location = new System.Drawing.Point(127, 80);
+            this.Txt_descripcion_ar.Location = new System.Drawing.Point(127, 42);
             this.Txt_descripcion_ar.MaxLength = 50;
             this.Txt_descripcion_ar.Name = "Txt_descripcion_ar";
             this.Txt_descripcion_ar.ReadOnly = true;
@@ -842,7 +884,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_retornar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(103)))), ((int)(((byte)(112)))));
             this.Btn_retornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_retornar.ForeColor = System.Drawing.Color.White;
-            this.Btn_retornar.Location = new System.Drawing.Point(301, 338);
+            this.Btn_retornar.Location = new System.Drawing.Point(301, 300);
             this.Btn_retornar.Name = "Btn_retornar";
             this.Btn_retornar.Size = new System.Drawing.Size(110, 30);
             this.Btn_retornar.TabIndex = 25;
@@ -858,7 +900,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_guardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(103)))), ((int)(((byte)(112)))));
             this.Btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_guardar.ForeColor = System.Drawing.Color.White;
-            this.Btn_guardar.Location = new System.Drawing.Point(174, 338);
+            this.Btn_guardar.Location = new System.Drawing.Point(174, 300);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(110, 30);
             this.Btn_guardar.TabIndex = 24;
@@ -875,7 +917,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_cancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.Btn_cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_cancelar.Location = new System.Drawing.Point(52, 338);
+            this.Btn_cancelar.Location = new System.Drawing.Point(52, 300);
             this.Btn_cancelar.Name = "Btn_cancelar";
             this.Btn_cancelar.Size = new System.Drawing.Size(110, 30);
             this.Btn_cancelar.TabIndex = 22;
@@ -887,7 +929,7 @@ namespace Sol_Almacen.Presentacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 46);
+            this.label1.Location = new System.Drawing.Point(81, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 21;
@@ -896,7 +938,7 @@ namespace Sol_Almacen.Presentacion
             // 
             // Txt_codigo_ar
             // 
-            this.Txt_codigo_ar.Location = new System.Drawing.Point(127, 43);
+            this.Txt_codigo_ar.Location = new System.Drawing.Point(127, 5);
             this.Txt_codigo_ar.Name = "Txt_codigo_ar";
             this.Txt_codigo_ar.Size = new System.Drawing.Size(100, 20);
             this.Txt_codigo_ar.TabIndex = 19;
@@ -912,7 +954,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_salir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_salir.ImageKey = "salir.ico";
             this.Btn_salir.ImageList = this.Img_principal;
-            this.Btn_salir.Location = new System.Drawing.Point(336, 532);
+            this.Btn_salir.Location = new System.Drawing.Point(338, 434);
             this.Btn_salir.Name = "Btn_salir";
             this.Btn_salir.Size = new System.Drawing.Size(75, 56);
             this.Btn_salir.TabIndex = 18;
@@ -931,13 +973,14 @@ namespace Sol_Almacen.Presentacion
             this.Btn_reporte.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_reporte.ImageKey = "reporte.ico";
             this.Btn_reporte.ImageList = this.Img_principal;
-            this.Btn_reporte.Location = new System.Drawing.Point(255, 532);
+            this.Btn_reporte.Location = new System.Drawing.Point(257, 434);
             this.Btn_reporte.Name = "Btn_reporte";
             this.Btn_reporte.Size = new System.Drawing.Size(75, 56);
             this.Btn_reporte.TabIndex = 17;
             this.Btn_reporte.Text = "Reporte";
             this.Btn_reporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_reporte.UseVisualStyleBackColor = false;
+            this.Btn_reporte.Click += new System.EventHandler(this.Btn_reporte_Click_1);
             // 
             // Btn_eliminar
             // 
@@ -949,7 +992,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_eliminar.ImageKey = "eliminar.ico";
             this.Btn_eliminar.ImageList = this.Img_principal;
-            this.Btn_eliminar.Location = new System.Drawing.Point(174, 532);
+            this.Btn_eliminar.Location = new System.Drawing.Point(176, 434);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(75, 56);
             this.Btn_eliminar.TabIndex = 16;
@@ -968,7 +1011,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_actualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_actualizar.ImageKey = "actualizar.ico";
             this.Btn_actualizar.ImageList = this.Img_principal;
-            this.Btn_actualizar.Location = new System.Drawing.Point(93, 532);
+            this.Btn_actualizar.Location = new System.Drawing.Point(95, 434);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(75, 56);
             this.Btn_actualizar.TabIndex = 15;
@@ -987,7 +1030,7 @@ namespace Sol_Almacen.Presentacion
             this.Btn_nuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_nuevo.ImageKey = "nuevo.ico";
             this.Btn_nuevo.ImageList = this.Img_principal;
-            this.Btn_nuevo.Location = new System.Drawing.Point(12, 532);
+            this.Btn_nuevo.Location = new System.Drawing.Point(14, 434);
             this.Btn_nuevo.Name = "Btn_nuevo";
             this.Btn_nuevo.Size = new System.Drawing.Size(75, 56);
             this.Btn_nuevo.TabIndex = 14;
@@ -1019,6 +1062,7 @@ namespace Sol_Almacen.Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Listado)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_almacenes)).EndInit();
             this.Pnl_listado_sg.ResumeLayout(false);
             this.Pnl_listado_sg.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Listado_sg)).EndInit();
@@ -1094,5 +1138,6 @@ namespace Sol_Almacen.Presentacion
         internal System.Windows.Forms.Button Btn_retornar_sg;
         internal System.Windows.Forms.Button Btn_buscar_sg;
         internal System.Windows.Forms.TextBox Txt_buscar_sg;
+        private System.Windows.Forms.DataGridView Dgv_almacenes;
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Sol_Almacen.Presentacion")]
+[assembly: AssemblyTitle("Sistema de Almacén")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Sol_Almacen.Presentacion")]
+[assembly: AssemblyCompany("Grupo DatSoft  - Servicios de Informática")]
+[assembly: AssemblyProduct("Sistema de Almacén versión 1.0")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

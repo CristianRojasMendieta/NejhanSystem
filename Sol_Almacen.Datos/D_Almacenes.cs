@@ -52,7 +52,7 @@ namespace Sol_Almacen.Datos
                 Comando.Parameters.Add("@Cdescripcion", SqlDbType.VarChar).Value = Oalmacenes.Descripcion_al;
                 Comando.Parameters.Add("@Bestado", SqlDbType.Bit).Value = Oalmacenes.Estado;
                 SqlCon.Open();
-                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo ingresar el registro";
+                Rpta = Comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo ingresar el registro";
             }
             catch (Exception ex)
             {

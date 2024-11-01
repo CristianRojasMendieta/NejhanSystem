@@ -62,7 +62,7 @@ namespace Sol_Almacen.Presentacion
             else
             {
                 Txt_codigo_al.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["codigo_al"].Value);
-                Txt_descripcion_em.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["descripcion_em"].Value);
+                Txt_descripcion_em.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["razonsocial_em"].Value);
                 Txt_codigo_em.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["codigo_em"].Value);
                 Txt_descripcion_al.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["descripcion_al"].Value);
             }

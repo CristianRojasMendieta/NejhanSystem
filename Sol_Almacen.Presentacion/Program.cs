@@ -16,7 +16,7 @@ namespace Sol_Almacen.Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Proveedores());
+            Application.Run(new Frm_login());
         }
     }
 }

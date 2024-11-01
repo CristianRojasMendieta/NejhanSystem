@@ -44,12 +44,22 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="D_Almacenes.cs" />
     <Compile Include="D_Articulos.cs" />
+    <Compile Include="D_Entrada_Articulos.cs" />
     <Compile Include="D_Grupos.cs" />
+    <Compile Include="D_Inventarios.cs" />
+    <Compile Include="D_login.cs" />
     <Compile Include="D_Marcas.cs" />
     <Compile Include="D_Proveedores.cs" />
+    <Compile Include="D_Reportes.cs" />
+    <Compile Include="D_ReportesPersonalizados.cs" />
     <Compile Include="D_Rubros.cs" />
+    <Compile Include="D_Salida_Articulos.cs" />
+    <Compile Include="D_Stock_Actual.cs" />
     <Compile Include="D_SubGrupos.cs" />
     <Compile Include="D_Unidades_Medidas.cs" />
+    <Compile Include="D_Uso_Insumos.cs" />
+    <Compile Include="MailServices\MasterMailServer.cs" />
+    <Compile Include="MailServices\SystemSupportMail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
